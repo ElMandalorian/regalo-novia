@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu regalito mi cielitoo <3</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #2c003e, #7d2e9b);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }.slide {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+        color: white;
+        padding: 20px;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .caption {
+        margin-top: 15px;
+        font-size: 1.2em;
+    }
+
+    .nav-buttons {
+        position: fixed;
+        bottom: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+        z-index: 2;
+    }
+
+    .nav-buttons button {
+        padding: 10px 20px;
+        background: #9333ea;
+        border: none;
+        color: white;
+        font-size: 1em;
+        border-radius: 20px;
+        box-shadow: 0 0 10px #e0b0ff;
+        cursor: pointer;
+    }
+
+    .despedida h2 {
+        color: #e0b0ff;
+    }
+
+    .despedida p {
+        font-size: 1.2em;
+        color: #ffffff;
+    }
+
+    .despedida img {
+        width: 150px;
+        margin-top: 15px;
+    }
+
+    .heart {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background: red;
+        transform: rotate(45deg);
+        animation: fall 5s linear infinite;
+        top: -20px;
+        z-index: 1;
+    }
+
+    .heart::before,
+    .heart::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: red;
+        border-radius: 50%;
+    }
+
+    .heart::before {
+        top: -10px;
+        left: 0;
+    }
+
+    .heart::after {
+        left: -10px;
+        top: 0;
+    }
+
+    @keyframes fall {
+        0% { top: -10px; opacity: 1; }
+        100% { top: 100vh; opacity: 0; }
+    }
+
+    #music-controls {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 3;
+    }
+
+    #music-controls button {
+        background: #ffffff20;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        padding: 8px 15px;
+        font-size: 0.9em;
+        cursor: pointer;
+        box-shadow: 0 0 5px #e0b0ff;
+    }
+</style>
+
+</head>
+<body>
+<div id="music-controls">
+    <button onclick="toggleMusic()" id="music-btn">Pausar música</button>
+</div>
+<audio id="music" autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+</audio><!-- Corazones --><script>
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (3 + Math.random() * 2) + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 300);
+</script><!-- Slides --><div class="slide active">
+    <h1>¡Feliz 1 año y 5 meses mi niñaaaa!</h1>
+    <img src="inicio.jpg" alt="Decoración inicial" style="width: 800px; margin-top: 20px; border-radius: 15px;">
+</div><!-- 9 imágenes con tamaños personalizados --><div class="slide"><div class="photo"><img src="foto1.jpg" alt="Foto 1" style="width: 60%; max-width: 550px;"><div class="caption">Tu carita tan tierna que nunca me cansare de ver toda esa hermosura de niñaa siempre mi favorita sin dudaaa<33</div></div></div>
+<div class="slide"><div class="photo"><img src="foto2.jpg" alt="Foto 2" style="width: 70%; max-width: 200px;"><div class="caption">Siempre me sacas una sonrisa con tus locuras y eso te hace unica mi vida nadie me pude hacer reir como tu lo haces:)</div></div></div>
+<div class="slide"><div class="photo"><img src="foto3.jpg" alt="Foto 3" style="width: 50%; max-width: 500px;"><div class="caption">Tu me hiciste ver al mundo de otra forma más alegre con esa sonrisa y ojitos tan preciososs que tienesss</div></div></div>
+<div class="slide"><div class="photo"><img src="foto4.jpg" alt="Foto 4" style="width: 80%; max-width: 300px;"><div class="caption">Me siento orgullosa de la mujer que tengo en este momento has avanzado mucho que siempre te presumo con todosss cariño<3</div></div></div>
+<div class="slide"><div class="photo"><img src="foto5.jpg" alt="Foto 5" style="width: 75%; max-width: 200px;"><div class="caption">Te cargas unos labios muyy dulcess con su gloss que siempre quedo diva pero no me importa mientras seas tu a quien beso <33</div></div></div>
+<div class="slide"><div class="photo"><img src="foto6.jpg" alt="Foto 6" style="width: 65%; max-width: 400px;"><div class="caption">Debo reconocer que estos ultimos meses si se notan muchso resultados increibles en tiii que no puedo dejar de pensar en esas piernotas que te cargas jajaja</div></div></div>
+<div class="slide"><div class="photo"><img src="foto7.jpg" alt="Foto 7" style="width: 85%; max-width: 400px;"><div class="caption">Mirala usando lo que le regalo su suegra a su nuera favorita jajaja</div></div></div>
+<div class="slide"><div class="photo"><img src="foto8.jpg" alt="Foto 8" style="width: 55%; max-width: 400px;"><div class="caption">Aqui vemos a una mujer increible tanto que se merece mucho más que el mundo entero y yo quiero darle todoooo</div></div></div>
+<div class="slide"><div class="photo"><img src="foto9.jpg" alt="Foto 9" style="width: 90%; max-width: 400px;"><div class="caption">Tus ouftis sin duda son la cosa mas aestetic que he visto encerio siempre te luces con ellos amorcito enseñame jaja</div></div></div><!-- 1 video con tamaño personalizado --><div class="slide">
+    <div class="photo">
+        <video controls style="width: 85%; max-width: 300px;">
+            <source src="video1.mp4" type="video/mp4">
+        </video>
+        <div class="caption">Uno de mis videos favoritos sin duda mi vida siempre tan chulaaa <3</div>
+    </div>
+</div><!-- Despedida --><div class="slide despedida">
+    <h2>Gracias por todo mi niñaaaa <3</h2>
+    <p>Todo este tiempo que llevamos ha sido lo mejor que me ha pasado sin duda, desde que te conoci todo me fue bienn siempre me estas apoyando, dando cariño, alegrando mis dias, dandome detalles que nadie me habia hecho, encerio gracias por todo lo que has hecho por miiii, no se como agradecerte porque es bastante lo que haces por mi y cuando digo que te quiero dar todo voy encerio hare hasta lo imposible para mantenerte muyyy felizz yy que nuestros hijos siempre recuerden a su padre como el hombre perfecto para su mama<333</p>
+    <img src="final.jpg" alt="Decoración final" style="width: 200px;">
+</div><div class="nav-buttons">
+    <button onclick="changeSlide(-1)">Anterior</button>
+    <button onclick="changeSlide(1)">Siguiente</button>
+</div><script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    function changeSlide(direction) {
+        slides[current].classList.remove('active');
+        current = (current + direction + slides.length) % slides.length;
+        slides[current].classList.add('active');
+    }
+
+    const music = document.getElementById("music");
+    const musicBtn = document.getElementById("music-btn");
+    let playing = true;
+
+    function toggleMusic() {
+        if (playing) {
+            music.pause();
+            musicBtn.textContent = "Reproducir música";
+        } else {
+            music.play();
+            musicBtn.textContent = "Pausar música";
+        }
+        playing = !playing;
+    }
+</script></body>
+</html>
